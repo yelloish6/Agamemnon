@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="mobile-web-appp-capable" content="yes">
+	<meta name="viewport" content = "height = device-height, width = device-width, user-scalable = no">
+	<title>Agamemnon Home Automation</title>
+	<script type="text/javascript" src="/webiopi.js"></script>
+	<script type="text/javascript" src="scripts/bacon.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/agamemnon.css">
+	<link rel="shortcut icon" sizes="196x196" href="img/agamemnon.jpg"/>
+	<script type="text/javascript">
+	function startTime(){
+		var today = new Date();
+		var h = today.getHours();
+		var m = today.getMinutes();
+		var s = today.getSeconds();
+		var d = today.getDate();
+		var y = today.getFullYear();
+		var mo = today.getMonth() + 1;
+		m = checkTime(m);
+		s = checkTime(s);
+		document.getElementById('clock').innerHTML = d + "/" + mo + "/" + y + " " + h + ":" + m + ":" + s;
+		var t = setTimeout(startTime, 500);
+	}
+	function checkTime(i){
+		if (i < 10) {i = "0" + i}; //add zeros in front of numbers smaller than 10
+		return i;
+	}
+	</script>
+</head>
+
+
+
+<body 	onload="startTime()"
+	background = "img/living_b&w.jpg">
+	<div id="clock"></div>
+	</br>
+	</br>
+	<p align = "center"><a href = "lights.html">Lumini</a></p>
+	</br>
+	<p align = "center"><a href = "video.html">Camere Video</a></p>
+	</br>
+	<p align = "center"><a href = "http://192.168.1.149:80/">Televizor</a></p>
+	</br>
+	<p align = "center"><a href = "workinprogres.html">Sistem Incalzire</a></p>
+	</br>
+	<p align = "center"><a href = "http://192.168.1.133:9091/transmission/web/">Torent</a></p>
+	</br>
+	<p align = "center"><a href = "test_lights.html">TEST AREA - DO NOT ENTER</a></p>
+	</br>
+
+
+</body>
+</html>
+

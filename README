@@ -1,0 +1,19 @@
+This folder contains all the files for the Agamemnon Home Automation Project
+GitHub initiated according to: https://www.howtoforge.com/tutorial/install-git-and-github-on-ubuntu-14.04/
+
+Git commands:
+
+1. initialize a new repository
+	git init path-to-folder-relative-to-home
+2. add a file/folder to the git
+	git add add-your-filename-here
+3. commit chanes to git
+	git commit -m "what was changed"
+4. upload local version to GitHub
+	git push origin master
+
+
+Controlling GPIO pins over a http webpge - This is a pre project for home automation.
+
+link: http://forums.connectedly.com/raspberry-pi-f179/how-controlling-gpio-pins-via-internet-2884/
+
