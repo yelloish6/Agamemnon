@@ -4,9 +4,6 @@ import datetime
 GPIO = webiopi.GPIO
 
 LIGHT = 17 # GPIO pin using BCM numbering
-LIVING_WRITE = 22
-LIVING_READ = 27
-
 
 HOUR_ON  = 8  # Turn Light ON at 08:00
 HOUR_OFF = 18 # Turn Light OFF at 18:00
@@ -55,9 +52,3 @@ def setLightHours(on, off):
     HOUR_ON = int(on)
     HOUR_OFF = int(off)
     return getLightHours()
-
-@webiopi.macro
-def getLightState():
-	p0 = int(GPIO.digitalRead(LIVING_READ))
-	print(p0)
-	return ("%s" % (p0))
