@@ -32,11 +32,16 @@
         		content.append(button);
         		
         		button = webiopi().createSequenceButton("living", "Living", 22, 200, "01");
-			var state = webiopi().digitalRead(27);
-			var style = (state == 1) ? "HIGH" : "LOW";
-			button.attr("class", style);
+			var state = webiopi().digitalRead(27, gpioReadCallback);
+			function gpioReadCallback(gpio, value){
+				if (value == 1) {
+						webiopi().setClass("button", "HIGH");
+					} else {
+						webiopi().setClass("button", "LOW");
+					}	
+			}
         		content.append(button);
-
+			
 			button = webiopi().createGPIOButton(27, "LivingStat");
 			content.append(button);
         		
