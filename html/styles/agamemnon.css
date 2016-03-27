@@ -55,6 +55,25 @@ a:hover, a:active {
         		color: LightGray;
         		}
 
+button#testbutton {
+			display: block;
+        		position: relative;
+        		margin: 10px;
+        		padding: 0 10px;
+        		text-align: center;
+        		text-decoration: none;
+        		width: 200px;
+        		height: 40px;
+        		font: bold 18px/25px Arial, sans-serif;    				
+        		border: 0px;	
+        				
+        	    -webkit-transition: all 0.15s ease;
+    			-moz-transition: all 0.15s ease;
+    			-o-transition: all 0.15s ease;
+    			-ms-transition: all 0.15s ease;
+    			transition: all 0.15s ease;
+			}
+
 .HIGH {
 			background-color: red
 }
